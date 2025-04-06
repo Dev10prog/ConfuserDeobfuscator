@@ -1,0 +1,24 @@
+version: 1.0.{build}
+
+image: Visual Studio 2022
+
+platform: x64
+
+branches:
+  only:
+    - main  # Replace with your branch name if different
+
+build:
+  project: YourSolution.sln  # Replace with your solution file name
+
+artifacts:
+  - path: YourProject/bin/Release/YourProject.exe  # Replace with your EXE file location
+    name: YourProject
+
+# Optional: Define testing steps
+test_script:
+  - |
+    if ($env:APPVEYOR_REPO_NAME) {
+      Write-Host "Running unit tests..."
+      & "C:\Program Files\dotnet\dotnet" test --configuration Release
+    }
