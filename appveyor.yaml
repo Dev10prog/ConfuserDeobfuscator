@@ -9,11 +9,11 @@ branches:
     - main  # Replace with your branch name if different
 
 build:
-  project: YourSolution.sln  # Replace with your solution file name
+  project: ConfuserDeobfuscator/ConfuserDeobfuscator.sln  # Replace with your solution file name
 
 artifacts:
   - path: YourProject/bin/Release/YourProject.exe  # Replace with your EXE file location
-    name: YourProject
+    name: ConfuserEXDeobfuscator
 
 # Optional: Define testing steps
 test_script:
